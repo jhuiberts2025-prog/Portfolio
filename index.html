@@ -1,1 +1,213 @@
-<html lang="nl"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>O&O Portfolio</title>    <style>        *{            margin:0;            padding:0;            box-sizing:border-box;            font-family: Arial, sans-serif;        }        body{            background-color:#f4f4f4;            color:#333;            line-height:1.6;        }        header{            background:#1e3a5f;            color:white;            padding:30px;            text-align:center;        }        nav{            background:#16324a;            padding:15px;            text-align:center;        }        nav a{            color:white;            text-decoration:none;            margin:0 15px;            font-weight:bold;        }        nav a:hover{            color:#ffd166;        }        .hero{            padding:60px 20px;            text-align:center;            background:white;        }        .hero h1{            font-size:48px;            margin-bottom:15px;        }        .hero p{            font-size:20px;            color:#666;        }        .container{            width:90%;            max-width:1000px;            margin:40px auto;        }        .section{            background:white;            margin-bottom:30px;            padding:30px;            border-radius:10px;            box-shadow:0 2px 8px rgba(0,0,0,0.1);        }        .section h2{            margin-bottom:15px;            color:#1e3a5f;        }        footer{            background:#1e3a5f;            color:white;            text-align:center;            padding:20px;            margin-top:40px;        }        .project{            margin-top:15px;            padding:15px;            background:#f9f9f9;            border-left:5px solid #1e3a5f;        }        button{            margin-top:15px;            padding:10px 20px;            border:none;            background:#1e3a5f;            color:white;            border-radius:5px;            cursor:pointer;        }        button:hover{            background:#274d78;        }    </style></head><body>    <header>        <h1>O&O Portfolio</h1>        <p>Mijn schoolportfolio voor Onderzoek & Ontwerpen</p>    </header>    <nav>        <a href="#over">Over mij</a>        <a href="#projecten">Projecten</a>        <a href="#contact">Contact</a>    </nav>    <section class="hero">        <h1>Welkom!</h1>        <p>Hier vind je mijn projecten, onderzoek en ontwerpen.</p>        <button onclick="showMessage()">Klik hier</button>    </section>    <div class="container">        <section class="section" id="over">            <h2>Over mij</h2>            <p>                Hallo! Ik ben een leerling die werkt aan verschillende O&O-projecten.                Op deze website laat ik mijn werk en voortgang zien.            </p>        </section>        <section class="section" id="projecten">            <h2>Projecten</h2>            <div class="project">                <h3>Project 1</h3>                <p>Beschrijving van jouw eerste project.</p>            </div>            <div class="project">                <h3>Project 2</h3>                <p>Beschrijving van jouw tweede project.</p>            </div>            <div class="project">                <h3>Project 3</h3>                <p>Beschrijving van jouw derde project.</p>            </div>  </div>            <div class="project">                <h3>Project 4</h3>                <p>We moesten een probleem oplossen over blauwalg voor wattertoppers.Wij hadden een aparte bak voor de dijk bouwen gemaakt en je had een molen en als je daar dan aan draaide begen het golven te maken.dat maakt dan het zelfde als het water scheppen.Dan hoef je niet in het water te staan en heb je geen last meer van blauwalg.je moet wel om de week het water vervangen als het te warm is en te vies.</p>       </section>        <section class="section" id="contact">            <h2>Contact</h2>            <p>Email: jouwnaam@email.com</p>        </section>    </div>    <footer>        <p>© 2026 O&O Portfolio</p>    </footer>    <script>        function showMessage() {            alert("Welkom op mijn O&O Portfolio!");        }    </script></body></html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O&O Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color:#f4f4f4;
+            color:#333;
+        }
+
+        header{
+            background:#1e3a5f;
+            color:white;
+            text-align:center;
+            padding:40px 20px;
+        }
+
+        nav{
+            background:#16324a;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:#ffd166;
+        }
+
+        .hero{
+            background:white;
+            text-align:center;
+            padding:60px 20px;
+        }
+
+        .hero h1{
+            font-size:50px;
+            margin-bottom:10px;
+        }
+
+        .hero p{
+            font-size:20px;
+            color:#666;
+        }
+
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:40px auto;
+        }
+
+        .section{
+            margin-bottom:40px;
+        }
+
+        .section h2{
+            margin-bottom:20px;
+            color:#1e3a5f;
+            text-align:center;
+        }
+
+        .projects{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap:20px;
+        }
+
+        .project-card{
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .project-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .project-card h3{
+            color:#1e3a5f;
+            margin-bottom:10px;
+        }
+
+        .project-card p{
+            margin-bottom:15px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            background:#1e3a5f;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#274d78;
+        }
+
+        footer{
+            background:#1e3a5f;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>O&O Portfolio</h1>
+        <p>Mijn Onderzoek & Ontwerpen projecten</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#projecten">Projecten</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Welkom!</h1>
+        <p>Bekijk hieronder mijn vier O&O-projecten.</p>
+    </section>
+
+    <div class="container">
+
+        <section class="section" id="projecten">
+            <h2>Mijn Projecten</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3>Project 1 - Duurzame Stad</h3>
+                    <p>
+                        Onderzoek naar duurzame oplossingen voor een milieuvriendelijke stad.
+                    </p>
+                    <button onclick="showProject('Duurzame Stad')">
+                        Meer info
+                    </button>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 2 - Robotarm</h3>
+                    <p>
+                        Het ontwerpen en bouwen van een werkende robotarm.
+                    </p>
+                    <button onclick="showProject('Robotarm')">
+                        Meer info
+                    </button>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 3 - Waterfilter</h3>
+                    <p>
+                        Een onderzoek naar schoon drinkwater en filtersystemen.
+                    </p>
+                    <button onclick="showProject('Waterfilter')">
+                        Meer info
+                    </button>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 4 - Slimme Brug</h3>
+                    <p>
+                        Het ontwerpen van een slimme brug met sensoren en techniek.
+                    </p>
+                    <button onclick="showProject('Slimme Brug')">
+                        Meer info
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <p style="text-align:center;">
+                Email: jouwnaam@email.com
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 O&O Portfolio</p>
+    </footer>
+
+    <script>
+        function showProject(projectNaam) {
+            alert("Je hebt geklikt op: " + projectNaam);
+        }
+    </script>
+
+</body>
+</html>
