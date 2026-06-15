@@ -5,15 +5,16 @@
     <title>O&O Portfolio</title>
 
     <style>
+
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family: Arial, sans-serif;
+            font-family:Arial, sans-serif;
         }
 
         body{
-            background-color:#f4f4f4;
+            background:linear-gradient(to right,#eef2f7,#d9e7f5);
             color:#333;
         }
 
@@ -21,7 +22,7 @@
             background:#1e3a5f;
             color:white;
             text-align:center;
-            padding:40px 20px;
+            padding:60px 20px;
         }
 
         nav{
@@ -33,7 +34,7 @@
         nav a{
             color:white;
             text-decoration:none;
-            margin:0 15px;
+            margin:0 20px;
             font-weight:bold;
         }
 
@@ -42,85 +43,133 @@
         }
 
         .hero{
-            background:white;
             text-align:center;
-            padding:60px 20px;
+            padding:70px 20px;
         }
 
         .hero h1{
             font-size:50px;
+            color:#1e3a5f;
             margin-bottom:10px;
         }
 
         .hero p{
             font-size:20px;
-            color:#666;
+            color:#555;
         }
 
         .container{
             width:90%;
-            max-width:1100px;
+            max-width:1200px;
             margin:40px auto;
         }
 
         .section{
-            margin-bottom:40px;
+            margin-bottom:60px;
         }
 
         .section h2{
-            margin-bottom:20px;
-            color:#1e3a5f;
             text-align:center;
+            color:#1e3a5f;
+            margin-bottom:30px;
+            font-size:35px;
         }
 
         .projects{
             display:grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap:20px;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
         }
 
         .project-card{
             background:white;
-            padding:25px;
-            border-radius:10px;
-            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
             transition:0.3s;
         }
 
         .project-card:hover{
-            transform:translateY(-5px);
+            transform:translateY(-8px);
         }
 
-        .project-card h3{
+        .project-card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        }
+
+        .project-content{
+            padding:20px;
+        }
+
+        .project-content h3{
             color:#1e3a5f;
             margin-bottom:10px;
         }
 
-        .project-card p{
+        .project-content p{
             margin-bottom:15px;
+            line-height:1.5;
         }
 
         button{
-            padding:10px 20px;
+            padding:12px 20px;
             border:none;
             background:#1e3a5f;
             color:white;
-            border-radius:5px;
+            border-radius:8px;
             cursor:pointer;
+            transition:0.3s;
         }
 
         button:hover{
             background:#274d78;
         }
 
+        .extra-info{
+            display:none;
+            margin-top:15px;
+        }
+
+        .extra-info textarea{
+            width:100%;
+            height:120px;
+            padding:10px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            resize:vertical;
+            font-size:15px;
+        }
+
+        .contact-box{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            max-width:600px;
+            margin:auto;
+        }
+
+        .contact-box input,
+        .contact-box textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+        }
+
         footer{
             background:#1e3a5f;
             color:white;
             text-align:center;
-            padding:20px;
+            padding:25px;
             margin-top:40px;
         }
+
     </style>
+
 </head>
 <body>
 
@@ -143,58 +192,143 @@
     <div class="container">
 
         <section class="section" id="projecten">
+
             <h2>Mijn Projecten</h2>
 
             <div class="projects">
 
-                <div class="project-card">
-                    <h3>Project 1 - Knikkerbaan</h3>
-                    <p>
-                        Onderzoek naar duurzame oplossingen voor een milieuvriendelijke stad.
-                    </p>
-                    <button onclick="showProject('Duurzame Stad')">
-                        Meer info
-                    </button>
-                </div>
+                <!-- Project 1 -->
 
                 <div class="project-card">
-                    <h3>Project 2 - Vakkanjers Circulaire festival</h3>
-                    <p>
-                        Het ontwerpen en bouwen van een werkende robotarm.
-                    </p>
-                    <button onclick="showProject('Robotarm')">
-                        Meer info
-                    </button>
+
+                    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="">
+
+                    <div class="project-content">
+
+                        <h3>Project 1 - Knikkerbaan</h3>
+
+                        <p>
+                            Onderzoek naar duurzame oplossingen voor een milieuvriendelijke stad.
+                        </p>
+
+                        <button onclick="toggleInfo('info1')">
+                            Meer info
+                        </button>
+
+                        <div id="info1" class="extra-info">
+
+                            <textarea placeholder="Typ hier meer informatie over dit project..."></textarea>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div class="project-card">
-                    <h3>Project 3 - Aqualectra kantine</h3>
-                    <p>
-                        Een onderzoek naar schoon drinkwater en filtersystemen.
-                    </p>
-                    <button onclick="showProject('Waterfilter')">
-                        Meer info
-                    </button>
-                </div>
+                <!-- Project 2 -->
 
                 <div class="project-card">
-                    <h3>Project 4 - Wattertoppers</h3>
-                    <p>
-                        Het ontwerpen van een idee tegen blauwalg.
-                    </p>
-                    <button onclick="showProject('Wattertoppers')">
-                        Meer info
-                    </button>
+
+                    <img src="https://images.unsplash.com/photo-1581092919535-7146ff1a5902" alt="">
+
+                    <div class="project-content">
+
+                        <h3>Project 2 - Vakkanjers</h3>
+
+                        <p>
+                            Het ontwerpen en bouwen van een werkende robotarm.
+                        </p>
+
+                        <button onclick="toggleInfo('info2')">
+                            Meer info
+                        </button>
+
+                        <div id="info2" class="extra-info">
+
+                            <textarea placeholder="Typ hier meer informatie over dit project..."></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Project 3 -->
+
+                <div class="project-card">
+
+                    <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d" alt="">
+
+                    <div class="project-content">
+
+                        <h3>Project 3 - Aqualectra</h3>
+
+                        <p>
+                            Een onderzoek naar schoon drinkwater en filtersystemen.
+                        </p>
+
+                        <button onclick="toggleInfo('info3')">
+                            Meer info
+                        </button>
+
+                        <div id="info3" class="extra-info">
+
+                            <textarea placeholder="Typ hier meer informatie over dit project..."></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Project 4 -->
+
+                <div class="project-card">
+
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="">
+
+                    <div class="project-content">
+
+                        <h3>Project 4 - Wattertoppers</h3>
+
+                        <p>
+                            Het ontwerpen van een idee tegen blauwalg.
+                        </p>
+
+                        <button onclick="toggleInfo('info4')">
+                            Meer info
+                        </button>
+
+                        <div id="info4" class="extra-info">
+
+                            <textarea placeholder="Typ hier meer informatie over dit project..."></textarea>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
+
         </section>
 
         <section class="section" id="contact">
+
             <h2>Contact</h2>
-            <p style="text-align:center;">
-                Email: jouwnaam@email.com
-            </p>
+
+            <div class="contact-box">
+
+                <input type="text" placeholder="Naam">
+
+                <input type="email" placeholder="Email">
+
+                <textarea rows="5" placeholder="Bericht"></textarea>
+
+                <button>Versturen</button>
+
+            </div>
+
         </section>
 
     </div>
@@ -204,9 +338,20 @@
     </footer>
 
     <script>
-        function showProject(projectNaam) {
-            alert("Je hebt geklikt op: " + projectNaam);
+
+        function toggleInfo(id){
+
+            let infoBox = document.getElementById(id);
+
+            if(infoBox.style.display === "block"){
+                infoBox.style.display = "none";
+            }
+            else{
+                infoBox.style.display = "block";
+            }
+
         }
+
     </script>
 
 </body>
