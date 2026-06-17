@@ -64,6 +64,38 @@
             margin:40px auto;
         }
 
+        .about-me{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom:60px;
+            display:flex;
+            align-items:center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
+
+        .about-me img{
+            width:250px;
+            border-radius:15px;
+            box-shadow:0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .about-text{
+            flex:1;
+        }
+
+        .about-text h2{
+            color:#1e3a5f;
+            margin-bottom:15px;
+        }
+
+        .about-text p{
+            line-height:1.7;
+            margin-bottom:15px;
+        }
+
         .section{
             margin-bottom:60px;
         }
@@ -162,6 +194,7 @@
 
     <nav>
         <a href="#home">Home</a>
+        <a href="#overmij">Over mij</a>
         <a href="#projecten">Projecten</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -173,136 +206,143 @@
 
     <div class="container">
 
+        <!-- OVER MIJ -->
+
+        <section class="about-me" id="overmij">
+
+            <img src="ik.jpg" alt="Foto van mij">
+
+            <div class="about-text">
+
+                <h2>Over mij</h2>
+
+                <p>
+                    Hallo! Ik ben een leerling uit de brugklas en ik volg het vak
+                    O&O (Onderzoek & Ontwerpen). Tijdens dit vak leer ik hoe ik
+                    onderzoek doe naar verschillende problemen en hoe ik daarvoor
+                    creatieve oplossingen kan ontwerpen.
+                </p>
+
+                <p>
+                    Op deze website laat ik zien aan welke projecten ik heb gewerkt
+                    tijdens O&O. In de brugklas heb ik geleerd om onderzoek te doen,
+                    samen te werken, ontwerpen te maken en prototypes te bouwen.
+                    Deze projecten hebben mij geholpen om nieuwe vaardigheden te
+                    ontwikkelen en creatief na te denken over oplossingen.
+                </p>
+
+                <p>
+                    Hieronder staan mijn vier O&O-projecten waarin ik heb gewerkt aan
+                    een knikkerbaan, een duurzame oplossing voor een festival, een
+                    nieuwe kantine voor Aqualectra en een oplossing tegen blauwalg.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECTEN -->
+
         <section class="section" id="projecten">
 
             <h2>Mijn Projecten</h2>
 
             <div class="projects">
 
-                <!-- Project 1 -->
-
                 <div class="project-card">
-
                     <div class="project-content">
 
                         <h3>Project 1 - Knikkerbaan</h3>
 
-                        <p>
-                            De sloomste knikkerbaan maken.
-                        </p>
+                        <p>De sloomste knikkerbaan maken.</p>
 
-                        <button onclick="toggleInfo('info1')">
-                            Meer info
-                        </button>
+                        <button onclick="toggleInfo('info1')">Meer info</button>
 
                         <div id="info1" class="extra-info">
 
                             <p>
                                 Dit project ging over het ontwerpen van een slome knikkerbaan.
-                                We gebruikte karton voor de knikkerbaan en plakband en andere materialen.
-                                De knikkerbaan was wel goed maar ha wel problemen op sommige plekken.
+                                We gebruikten karton, plakband en andere materialen.
+                                De knikkerbaan werkte goed, maar had op sommige plekken nog problemen.
                             </p>
 
                         </div>
 
                     </div>
-
                 </div>
 
-                <!-- Project 2 -->
-
                 <div class="project-card">
-
                     <div class="project-content">
 
                         <h3>Project 2 - Vakkanjers</h3>
 
-                        <p>
-                            Het ontwerpen van een duurzame oplossing voor een circulair festival.
-                        </p>
+                        <p>Het ontwerpen van een duurzame oplossing voor een circulair festival.</p>
 
-                        <button onclick="toggleInfo('info2')">
-                            Meer info
-                        </button>
+                        <button onclick="toggleInfo('info2')">Meer info</button>
 
                         <div id="info2" class="extra-info">
 
                             <p>
                                 Tijdens dit project hebben we een oplossing bedacht voor drinken.
-                                We hadden een prototype gemaakt dat de bekers schoonmaakt, zodat
-                                je de beker opnieuw kunt gebruiken.
+                                We maakten een prototype dat bekers schoonmaakt, zodat deze
+                                opnieuw gebruikt kunnen worden.
                             </p>
 
                         </div>
 
                     </div>
-
                 </div>
 
-                <!-- Project 3 -->
-
                 <div class="project-card">
-
                     <div class="project-content">
 
                         <h3>Project 3 - Aqualectra</h3>
 
-                        <p>
-                            Een nieuwe kantine ontwerpen voor Aqualectra.
-                        </p>
+                        <p>Een nieuwe kantine ontwerpen voor Aqualectra.</p>
 
-                        <button onclick="toggleInfo('info3')">
-                            Meer info
-                        </button>
+                        <button onclick="toggleInfo('info3')">Meer info</button>
 
                         <div id="info3" class="extra-info">
 
                             <p>
-                                Bij dit project moesten we een kantine of kantoortuin ontwerpen voor Aqualectra.
-                                Wij kozen de kantine, omdat dat ons leuker leek.we hadden een kantine geboud, maar 
-                                we hadden het niet helemaal af kunnen maken.
+                                Bij dit project moesten we een kantine of kantoortuin ontwerpen.
+                                Wij kozen voor de kantine. We hebben een model gebouwd,
+                                maar konden het niet helemaal afmaken.
                             </p>
 
                         </div>
 
                     </div>
-
                 </div>
 
-                <!-- Project 4 -->
-
                 <div class="project-card">
-
                     <div class="project-content">
 
                         <h3>Project 4 - Wattertoppers</h3>
 
-                        <p>
-                            Het ontwerpen van een idee tegen blauwalg.
-                        </p>
+                        <p>Het ontwerpen van een idee tegen blauwalg.</p>
 
-                        <button onclick="toggleInfo('info4')">
-                            Meer info
-                        </button>
+                        <button onclick="toggleInfo('info4')">Meer info</button>
 
                         <div id="info4" class="extra-info">
 
                             <p>
                                 Voor dit project hebben wij een oplossing bedacht tegen blauwalg.
-                                Ik onderzocht de oorzaken van blauwalg. We hadden een aparte bak gemaakt
-                                voor de dijkbouw en als je aan een molentje draait ontstaan er golven,
-                                waardoor je niet in het water hoeft te komen.
+                                Ik onderzocht de oorzaken van blauwalg. We maakten een model
+                                waarbij een molentje golven creëert zodat je niet in het water
+                                hoeft te komen.
                             </p>
 
                         </div>
 
                     </div>
-
                 </div>
 
             </div>
 
         </section>
+
+        <!-- CONTACT -->
 
         <section class="section" id="contact">
 
